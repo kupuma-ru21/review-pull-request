@@ -16,7 +16,11 @@
       "error",
       { "devDependencies": ["**/*.test.tsx"] }
     ],
-    "no-restricted-imports": ["error", { "patterns": ["../*"] }]
+    "no-restricted-imports": ["error", { "patterns": ["../*"] }],
+    "react/function-component-definition": [
+      2,
+      { "namedComponents": "arrow-function" }
+    ]
   },
   "globals": { "React": true }
 }

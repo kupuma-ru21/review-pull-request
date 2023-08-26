@@ -1,7 +1,7 @@
 import { css } from '@/styled-system/css';
 
-export default function Home() {
-  return (
-    <div className={css({ fontSize: '6xl', fontWeight: 'bold' })}>Home</div>
-  );
-}
+const Home = () => (
+  <div className={css({ fontSize: '6xl', fontWeight: 'bold' })}>Home</div>
+);
+
+export default Home;
