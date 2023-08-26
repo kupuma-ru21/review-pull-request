@@ -1,6 +1,32 @@
 {
   "extends": [
     "next/core-web-vitals",
-    "plugin:storybook/recommended"
-  ]
+    "plugin:storybook/recommended",
+    "airbnb",
+    "airbnb/hooks"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      { "ts": "never", "tsx": "never" }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      { "devDependencies": ["**/*.test.tsx"] }
+    ],
+    "no-restricted-imports": ["error", { "patterns": ["../*"] }],
+    "react/function-component-definition": [
+      2,
+      { "namedComponents": "arrow-function" }
+    ],
+    "react/jsx-boolean-value": "error",
+    "react/jsx-no-bind": ["error", { "ignoreDOMComponents": false }],
+    "react/jsx-no-leaked-render": "error",
+    "react/jsx-sort-props": [2, { "multiline": "last" }],
+    "react/no-multi-comp": "error",
+    "react/no-object-type-as-default-prop": "error"
+  },
+  "globals": { "React": true }
 }
