@@ -15,7 +15,8 @@
     "import/no-extraneous-dependencies": [
       "error",
       { "devDependencies": ["**/*.test.tsx"] }
-    ]
+    ],
+    "no-restricted-imports": ["error", { "patterns": ["../*"] }]
   },
   "globals": { "React": true }
 }
