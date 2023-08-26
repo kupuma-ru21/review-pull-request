@@ -31,7 +31,8 @@
     "react/jsx-sort-props": [2, { "multiline": "last" }],
     "react/no-multi-comp": "error",
     "react/no-object-type-as-default-prop": "error",
-    "@typescript-eslint/array-type": "error"
+    "@typescript-eslint/array-type": "error",
+    "@typescript-eslint/consistent-generic-constructors": "error"
   },
   "globals": { "React": true }
 }
