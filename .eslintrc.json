@@ -30,7 +30,8 @@
     "react/jsx-no-leaked-render": "error",
     "react/jsx-sort-props": [2, { "multiline": "last" }],
     "react/no-multi-comp": "error",
-    "react/no-object-type-as-default-prop": "error"
+    "react/no-object-type-as-default-prop": "error",
+    "@typescript-eslint/array-type": "error"
   },
   "globals": { "React": true }
 }
