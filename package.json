@@ -42,6 +42,7 @@
     "@vitejs/plugin-react": "^4.0.4",
     "chromatic": "^6.24.1",
     "cspell": "^7.0.1",
+    "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-storybook": "^0.6.13",
     "jsdom": "^22.1.0",
     "prettier": "3.0.2",
