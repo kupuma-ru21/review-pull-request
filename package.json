@@ -35,9 +35,13 @@
     "@storybook/nextjs": "^7.3.2",
     "@storybook/react": "^7.3.2",
     "@storybook/testing-library": "^0.2.0",
+    "@testing-library/jest-dom": "^6.1.2",
+    "@testing-library/react": "^14.0.0",
+    "@vitejs/plugin-react": "^4.0.4",
     "chromatic": "^6.24.1",
     "cspell": "^7.0.1",
     "eslint-plugin-storybook": "^0.6.13",
+    "jsdom": "^22.1.0",
     "prettier": "3.0.2",
     "storybook": "^7.3.2",
     "vitest": "^0.34.3"
