@@ -1,3 +1,7 @@
+import { css } from '../../styled-system/css';
+
 export default function Home() {
-  return <h1>Home</h1>;
+  return (
+    <div className={css({ fontSize: '6xl', fontWeight: 'bold' })}>Home</div>
+  );
 }
