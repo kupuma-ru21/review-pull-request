@@ -10,7 +10,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "chromatic": "npx chromatic --project-token=chpt_d6633bc44335913",
-    "prettier:fix": "prettier --write 'src/**/*.{ts,tsx}'"
+    "prettier:fix": "prettier --write 'src/**/*.{ts,tsx}'",
+    "compile": "tsc"
   },
   "dependencies": {
     "@types/node": "20.5.6",
