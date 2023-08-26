@@ -23,7 +23,8 @@
     ],
     "react/jsx-boolean-value": "error",
     "react/jsx-no-bind": ["error", { "ignoreDOMComponents": false }],
-    "react/jsx-no-leaked-render": "error"
+    "react/jsx-no-leaked-render": "error",
+    "react/jsx-sort-props": [2, { "multiline": "last" }]
   },
   "globals": { "React": true }
 }
