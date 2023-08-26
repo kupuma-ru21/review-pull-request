@@ -25,7 +25,8 @@
     "react/jsx-no-bind": ["error", { "ignoreDOMComponents": false }],
     "react/jsx-no-leaked-render": "error",
     "react/jsx-sort-props": [2, { "multiline": "last" }],
-    "react/no-multi-comp": "error"
+    "react/no-multi-comp": "error",
+    "react/no-object-type-as-default-prop": "error"
   },
   "globals": { "React": true }
 }
