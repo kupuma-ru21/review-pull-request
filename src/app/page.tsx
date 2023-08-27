@@ -7,9 +7,8 @@ const Home = ({
     isBool: boolean;
     onClick: () => void;
 }) => {
-  function foo(onExample: () => number): number {
-    return onExample();
-  }
+  const str = 'a';
+  const isTest = str.includes('a');
 
   return (
     <button
