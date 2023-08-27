@@ -15,8 +15,11 @@ const Home = ({
   isBool: boolean;
   onClick: () => void;
 }) => {
-  const getFoo = (isFoo: boolean) => (isFoo ? undefined : { text: 'text' });
-  const foo = getFoo(true)?.text;
+  function foo(arg: 'bar' | undefined) {
+    if (arg) {
+      console.log(arg);
+    }
+  }
 
   const doSomething = useCallback(() => {
     if (!isBool) {
@@ -26,6 +29,10 @@ const Home = ({
 
     onClick();
   }, [isBool, onClick]);
+
+  if (!isBool) {
+    return null;
+  }
 
   return (
     <button
