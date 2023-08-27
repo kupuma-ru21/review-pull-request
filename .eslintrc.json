@@ -79,7 +79,8 @@
     "@typescript-eslint/no-unnecessary-type-arguments": "error",
     "@typescript-eslint/no-useless-empty-export": "error",
     "@typescript-eslint/prefer-enum-initializers": "error",
-    "@typescript-eslint/prefer-for-of": "error"
+    "@typescript-eslint/prefer-for-of": "error",
+    "@typescript-eslint/prefer-function-type": "error"
   },
   "globals": { "React": true }
 }

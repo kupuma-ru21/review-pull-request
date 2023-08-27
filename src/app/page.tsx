@@ -7,11 +7,8 @@ const Home = ({
     isBool: boolean;
     onClick: () => void;
 }) => {
-  function foo1() {
-    const array = [1];
-    for (let i = 0; i < array.length; i += 1) {
-      console.log(array[i]);
-    }
+  function foo(onExample: () => number): number {
+    return onExample();
   }
 
   return (
