@@ -8,9 +8,8 @@ const Home = ({
   readonly onClick: () => void;
 }) => {
   const func = (num: number | undefined) => {
-    if (num === undefined) {
-      console.log('num is defined');
-    }
+    const data = ['foo', 'bar', 'baz'];
+    const dataLast = data.length && data[data.length - 1];
   };
   return (
     <button
