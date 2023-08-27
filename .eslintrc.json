@@ -90,7 +90,9 @@
     "@typescript-eslint/sort-type-constituents": "error",
     "@typescript-eslint/strict-boolean-expressions": "error",
     "no-magic-numbers": "off",
-    "@typescript-eslint/no-magic-numbers": "error"
+    "@typescript-eslint/no-magic-numbers": "error",
+    "no-return-await": "off",
+    "@typescript-eslint/return-await": "error"
   },
   "globals": { "React": true }
 }

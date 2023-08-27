@@ -7,10 +7,14 @@ const Home = ({
   readonly isBool: boolean;
   readonly onClick: () => void;
 }) => {
-  const func = (num: number | undefined) => {
-    const data = ['foo', 'bar', 'baz'];
-    const dataLast = data.length && data[data.length - 1];
-  };
+  async function invalidInTryCatch1() {
+    try {
+      return await Promise.resolve('try');
+    } catch (e) {
+      return null;
+    }
+  }
+
   return (
     <button
       className={css({ fontSize: '6xl', fontWeight: 'bold' })}
