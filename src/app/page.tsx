@@ -46,3 +46,8 @@ const Home = ({
 };
 
 export default Home;
+
+enum A {
+  B,
+  C = B,
+}
