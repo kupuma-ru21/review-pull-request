@@ -1,7 +1,11 @@
 import { css } from '@/styled-system/css';
 import { useCallback } from 'react';
 
-const isBoolean = true;
+enum Status {
+  Unknown,
+  Closed = 1,
+  Open = 2,
+}
 
 const Home = ({
   isBool,
