@@ -17,3 +17,5 @@ const Home = ({
 );
 
 export default Home;
+
+const test = [1, 2, 3].reduce<readonly number[]>((arr, num) => arr.concat(num * 2), []);
