@@ -7,7 +7,8 @@ const Home = ({
   readonly isBool: boolean;
   readonly onClick: () => void;
 }) => {
-  const arrowFunctionReturnsPromise = async () => Promise.resolve('value');
+  const arg1 = [1, 2];
+  const msg1 = `arg1 = ${arg1}`;
   return (
     <button
       className={css({ fontSize: '6xl', fontWeight: 'bold' })}
@@ -20,3 +21,5 @@ const Home = ({
 };
 
 export default Home;
+
+type T2 = { a: string } & { b: string };
