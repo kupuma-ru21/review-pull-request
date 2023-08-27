@@ -7,8 +7,11 @@ const Home = ({
   readonly isBool: boolean;
   readonly onClick: () => void;
 }) => {
-  const arg1 = [1, 2];
-  const msg1 = `arg1 = ${arg1}`;
+  const func = (num: number | undefined) => {
+    if (num === undefined) {
+      console.log('num is defined');
+    }
+  };
   return (
     <button
       className={css({ fontSize: '6xl', fontWeight: 'bold' })}
@@ -21,5 +24,3 @@ const Home = ({
 };
 
 export default Home;
-
-type T2 = { a: string } & { b: string };
