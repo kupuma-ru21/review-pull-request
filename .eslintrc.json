@@ -47,7 +47,8 @@
           "order": "alphabetically"
         }
       }
-    ]
+    ],
+    "@typescript-eslint/method-signature-style": "error"
   },
   "globals": { "React": true }
 }
