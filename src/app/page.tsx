@@ -18,4 +18,4 @@ const Home = ({
 
 export default Home;
 
-const test = (foo: string | undefined | null) => (foo ?? 'a string');
+const test = (foo?: {a?: {b?: {c?: 'c'}}}) => foo?.a?.b?.c;
