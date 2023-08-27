@@ -20,12 +20,10 @@
     "@types/node": "20.5.6",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
-    "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
     "next": "13.4.19",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "typescript": "5.2.2"
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@pandacss/dev": "^0.12.2",
@@ -39,14 +37,18 @@
     "@storybook/testing-library": "^0.2.0",
     "@testing-library/jest-dom": "^6.1.2",
     "@testing-library/react": "^14.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
     "@vitejs/plugin-react": "^4.0.4",
     "chromatic": "^6.24.1",
     "cspell": "^7.0.1",
+    "eslint": "8.48.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-storybook": "^0.6.13",
     "jsdom": "^22.1.0",
     "prettier": "3.0.2",
     "storybook": "^7.3.2",
+    "typescript": "5.2.2",
     "vite-tsconfig-paths": "^4.2.0",
     "vitest": "^0.34.3",
     "husky": "^8.0.0"
