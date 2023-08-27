@@ -6,19 +6,16 @@ const Home = ({
 }: {
     isBool: boolean;
     onClick: () => void;
-}) => {
-  const str = 'a';
-  const isTest = str.includes('a');
-
-  return (
-    <button
-      className={css({ fontSize: '6xl', fontWeight: 'bold' })}
-      onClick={onClick}
-      type="button"
-    >
-      {isBool ? 'Home' : null}
-    </button>
-  );
-};
+}) => (
+  <button
+    className={css({ fontSize: '6xl', fontWeight: 'bold' })}
+    onClick={onClick}
+    type="button"
+  >
+    {isBool ? 'Home' : null}
+  </button>
+);
 
 export default Home;
+
+const test = (foo: string | undefined | null) => (foo ?? 'a string');
