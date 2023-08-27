@@ -4,8 +4,8 @@ const Home = ({
   isBool,
   onClick,
 }: {
-    isBool: boolean;
-    onClick: () => void;
+  readonly isBool: boolean;
+  readonly onClick: () => void;
 }) => (
   <button
     className={css({ fontSize: '6xl', fontWeight: 'bold' })}
@@ -17,5 +17,3 @@ const Home = ({
 );
 
 export default Home;
-
-const test = (foo?: {a?: {b?: {c?: 'c'}}}) => foo?.a?.b?.c;
