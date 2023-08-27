@@ -1,5 +1,13 @@
 import { css } from '@/styled-system/css';
 
+type Foo = {
+  bar?: string;
+  num?: number;
+};
+
+const foo: Foo = {};
+const isEqualsBar = foo.bar === 'hello';
+
 const Home = ({
   isBool,
   onClick,

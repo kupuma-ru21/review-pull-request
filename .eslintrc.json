@@ -65,7 +65,8 @@
         "format": ["PascalCase"],
         "prefix": ["on"]
       }
-    ]
+    ],
+    "@typescript-eslint/no-confusing-non-null-assertion": "error"
   },
   "globals": { "React": true }
 }
