@@ -1,5 +1,9 @@
 import { css } from '@/styled-system/css';
 import { useCallback } from 'react';
+import type { A, B } from './types';
+
+const a: A = { text: '' };
+const b: B = { bool: false };
 
 const Home = ({
   isBool,
