@@ -14,7 +14,7 @@
     "compile": "tsc",
     "cSpell": "pnpm cspell 'src/**/*.{ts,tsx}'",
     "test": "vitest",
-    "prepare": "panda codegen"
+    "prepare": "panda codegen && husky install"
   },
   "dependencies": {
     "@types/node": "20.5.6",
@@ -48,6 +48,7 @@
     "prettier": "3.0.2",
     "storybook": "^7.3.2",
     "vite-tsconfig-paths": "^4.2.0",
-    "vitest": "^0.34.3"
+    "vitest": "^0.34.3",
+    "husky": "^8.0.0"
   }
 }
