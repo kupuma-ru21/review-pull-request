@@ -4,9 +4,10 @@
     "plugin:storybook/recommended",
     "airbnb",
     "airbnb/hooks",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended-type-checked"
   ],
   "parser": "@typescript-eslint/parser",
+  "parserOptions": { "project": true },
   "plugins": ["@typescript-eslint"],
   "root": true,
   "rules": {
@@ -48,7 +49,23 @@
         }
       }
     ],
-    "@typescript-eslint/method-signature-style": "error"
+    "@typescript-eslint/method-signature-style": "error",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": ["variable", "parameter"],
+        "types": ["boolean"],
+        "format": ["PascalCase"],
+        "prefix": ["is", "has"]
+      },
+      { "selector": "typeLike", "format": ["PascalCase"] },
+      {
+        "selector": ["parameter"],
+        "types": ["function"],
+        "format": ["PascalCase"],
+        "prefix": ["on"]
+      }
+    ]
   },
   "globals": { "React": true }
 }
