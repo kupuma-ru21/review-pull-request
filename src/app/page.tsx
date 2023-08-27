@@ -1,11 +1,12 @@
 import { css } from '@/styled-system/css';
 import { useCallback } from 'react';
 
-enum Status {
-  Unknown,
-  Closed = 1,
-  Open = 2,
+type Example = {
+  property?: string;
 }
+
+const example: Example = {};
+const isIncludesBaz = example.property?.includes('baz');
 
 const Home = ({
   isBool,
@@ -14,6 +15,9 @@ const Home = ({
   isBool: boolean;
   onClick: () => void;
 }) => {
+  const getFoo = (isFoo: boolean) => (isFoo ? undefined : { text: 'text' });
+  const foo = getFoo(true)?.text;
+
   const doSomething = useCallback(() => {
     if (!isBool) {
       console.error('Nothing to do!');
