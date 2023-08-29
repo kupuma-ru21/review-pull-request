@@ -1,0 +1,30 @@
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - opened
+      - synchronize
+    paths:
+      - 'src/**'
+      - '.storybook/**'
+      - pnpm-lock.yaml
+      - .github/workflows/eslint.yml
+
+env:
+  pnpm-version: '8'
+
+name: Eslint
+jobs:
+  lint:
+    name: Eslint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: ${{ env.pnpm-version }}
+      - uses: actions/setup-node@v3.7.0
+      - run: pnpm install
+      - run: pnpm lint
