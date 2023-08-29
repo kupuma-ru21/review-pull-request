@@ -5,8 +5,8 @@ const config: CodegenConfig = {
   schema: 'https://fragrant-shadow-9470.fly.dev/',
   documents: ['src/components/**/*.graphql'],
   generates: {
-    'components/types.generated.ts': { plugins: ['typescript'] },
-    'components/': {
+    'src/components/types.generated.ts': { plugins: ['typescript'] },
+    'src/components/': {
       preset: 'near-operation-file',
       presetConfig: {
         extension: '.generated.ts',

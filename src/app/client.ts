@@ -3,10 +3,11 @@ import { registerApolloClient } from '@apollo/experimental-nextjs-app-support/rs
 
 // eslint-disable-next-line import/prefer-default-export
 export const { getClient } = registerApolloClient(
-  () => new ApolloClient({
-    cache: new InMemoryCache(),
-    link: new HttpLink({
-      uri: 'https://fragrant-shadow-9470.fly.dev/',
-    }),
-  }),
+  () =>
+    new ApolloClient({
+      cache: new InMemoryCache(),
+      link: new HttpLink({
+        uri: 'https://fragrant-shadow-9470.fly.dev/',
+      }),
+    })
 );
