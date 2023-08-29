@@ -20,6 +20,8 @@ on:
 
 env:
   pnpm-version: '8'
+  node-version: "18.0.0"
+
 
 # List of jobs
 jobs:
@@ -37,6 +39,10 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           version: ${{ env.pnpm-version }}
+      - name: setup node
+        uses: actions/setup-node@v3.7.0
+        with:
+          node-version: ${{ env.node-version }}
       - name: Install dependencies
         # 👇 Install dependencies with the same package manager used in the project (replace it as needed), e.g. yarn, npm, pnpm
         run: pnpm install
