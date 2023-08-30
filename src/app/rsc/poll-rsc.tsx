@@ -44,7 +44,7 @@ const Poll = ({
       // but it's fine for this demo
       setIsLoading(false);
     },
-    [mutate, poll.id, router, pathname]
+    [mutate, poll.id, router, pathname],
   );
 
   return (

@@ -32,7 +32,9 @@ export const Poll = ({
     <div>
       <h1 className="text-6xl mb-6">{poll.question}</h1>
       <p className="text-2xl mb-6">
-        Total votes: {poll.totalVotes.toLocaleString()}
+        Total votes:
+        {' '}
+        {poll.totalVotes.toLocaleString()}
       </p>
 
       <ul className="max-w-3xl">

@@ -36,8 +36,16 @@ const Answer = ({
     </button>
 
     <div>
-      <div>{percentage.toPrecision(PRECISION)}%</div>
-      <div className="text-xs">({votes} votes)</div>
+      <div>
+        {percentage.toPrecision(PRECISION)}
+        %
+      </div>
+      <div className="text-xs">
+        (
+        {votes}
+        {' '}
+        votes)
+      </div>
     </div>
   </li>
 );
