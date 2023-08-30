@@ -1,5 +1,7 @@
 'use client';
 
+import { css } from '@/styled-system/css';
+
 const INITIAL_PERCENTAGE = 0;
 const INITIAL_VOTES = 0;
 const PRECISION = 2;
@@ -23,7 +25,12 @@ const Answer = ({
   votes?: number;
 }) => (
   <li className="flex mb-4">
-    <button disabled={isDisabled || isLoading} onClick={onClick} type="button">
+    <button
+      className={css({ color: 'red', cursor: 'pointer' })}
+      disabled={isDisabled || isLoading}
+      onClick={onClick}
+      type="button"
+    >
       <div
         style={{
           width: isShowPercentage ? `${percentage}%` : INITIAL_PERCENTAGE,
