@@ -8,7 +8,7 @@ on:
       - synchronize
 
 env:
-  pnpm-version: '8'
+  pnpm-version: '8.7.0'
   node-version: "18.0.0"
 
 name: Vitest
