@@ -1,6 +1,6 @@
 import { css } from '@/styled-system/css';
+import getClient from '@/src/client';
 import { TodosDocument } from './todos.generated';
-import getClient from './client';
 
 const Home = async () => {
   const { data } = await getClient().query({ query: TodosDocument });
