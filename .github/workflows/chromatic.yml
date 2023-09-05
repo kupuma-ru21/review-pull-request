@@ -19,7 +19,7 @@ on:
       - .github/workflows/chromatic.yml
 
 env:
-  pnpm-version: '8.7.0'
+  pnpm-version: '8.7.1'
   node-version: "18.0.0"
 
 
