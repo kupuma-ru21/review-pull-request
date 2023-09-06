@@ -8,6 +8,7 @@ const Presenter = (
       (todo: { readonly id: string; }) => (
         <li
           className={css({ fontSize: '6xl', fontWeight: 'bold' })}
+          key={todo.id}
         >
           {todo.id}
         </li>
