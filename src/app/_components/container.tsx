@@ -1,5 +1,5 @@
 import getClient from '@/src/client';
-import { TodosDocument } from './todos.generated';
+import { TodosDocument } from '@/src/app/todos.generated';
 import Presenter from './presenter';
 
 const Container = async () => {

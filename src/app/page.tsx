@@ -1,4 +1,4 @@
-import Container from './container';
+import Container from './_components/container';
 
 const Home = () => <Container />;
 
