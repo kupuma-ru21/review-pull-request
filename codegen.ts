@@ -2,6 +2,7 @@ import type { CodegenConfig } from '@graphql-codegen/cli';
 
 const config: CodegenConfig = {
   overwrite: true,
+
   schema: 'https://fragrant-shadow-9470.fly.dev/',
   documents: ['src/components/**/*.graphql'],
   generates: {
@@ -13,6 +14,7 @@ const config: CodegenConfig = {
         baseTypesPath: 'types.generated.ts',
       },
       plugins: ['typescript-operations', 'typed-document-node'],
+      hooks: { afterOneFileWrite: ['prettier --write'] },
     },
   },
 };
