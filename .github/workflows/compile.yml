@@ -8,7 +8,7 @@ on:
       - synchronize
 
 env:
-  pnpm-version: '8.7.0'
+  pnpm-version: '8.7.x'
   node-version: "18.0.0"
 
 name: Compile
