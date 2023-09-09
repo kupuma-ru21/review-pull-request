@@ -1,5 +1,5 @@
 import Container from './container';
 
-const Home = () => <Container />;
+const Page = () => <Container />;
 
-export default Home;
+export default Page;
