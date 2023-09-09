@@ -1,7 +1,5 @@
-import { css } from '@/styled-system/css';
+import Container from './container';
 
-const Home = () => (
-  <div className={css({ fontSize: '6xl', fontWeight: 'bold' })}>Home</div>
-);
+const Page = () => <Container />;
 
-export default Home;
+export default Page;
