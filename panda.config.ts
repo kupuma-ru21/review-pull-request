@@ -13,4 +13,14 @@ export default defineConfig({
   },
   // The output directory for your css system
   outdir: 'styled-system',
+  shorthands: false,
+  globalCss: {
+    'html, body': {
+      margin: 0,
+      padding: 0,
+      fontSize: '16px',
+    },
+  },
+  jsxFramework: 'react',
+  jsxStyleProps: 'none',
 });
