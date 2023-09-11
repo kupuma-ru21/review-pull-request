@@ -4,7 +4,8 @@
     "plugin:storybook/recommended",
     "airbnb",
     "airbnb/hooks",
-    "plugin:@typescript-eslint/recommended-type-checked"
+    "plugin:@typescript-eslint/recommended-type-checked",
+    "plugin:react/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": { "project": true },

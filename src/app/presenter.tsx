@@ -1,15 +1,19 @@
 import { css } from '@/styled-system/css';
 
 const Presenter = (
-  { todos }: {readonly todos: readonly { readonly id: string }[]},
+  { perspectives }: {readonly perspectives: readonly string[]},
 ) => (
   <ul>
-    {todos.map(
-      (todo: { readonly id: string; }) => (
-        <li
-          className={css({ fontSize: '6xl', fontWeight: 'bold' })}
-        >
-          {todo.id}
+    {perspectives.map(
+      (perspective) => (
+        <li className={css({ mb: '10px' })} key={perspective}>
+          <input
+            className={css({ mr: '10px', verticalAlign: 'middle' })}
+            id={perspective}
+            name={perspective}
+            type="checkbox"
+          />
+          <label className={css({ fontWeight: 'bold' })} htmlFor={perspective}>{perspective}</label>
         </li>
       ),
     )}
