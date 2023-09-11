@@ -13,6 +13,10 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    perspectives: ['perspective1', 'perspective2', 'perspective3'],
+    perspectives: [
+      { id: '1', text: 'perspective1' },
+      { id: '2', text: 'perspective2' },
+      { id: '3', text: 'perspective3' },
+    ],
   },
 };

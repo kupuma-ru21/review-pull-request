@@ -8,8 +8,7 @@ export const perspectives = [...Array(10)].map((_, index) => `perspective${index
 
 const Container = async () => {
   const { data } = await getClient().query({ query: PerspectivesDocument });
-  console.log(data);
-  return <Presenter perspectives={perspectives} />;
+  return <Presenter perspectives={data.perspectives} />;
 };
 
 export default Container;
