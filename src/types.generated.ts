@@ -16,34 +16,26 @@ export type Scalars = {
 
 export type Mutation = {
   __typename?: 'Mutation';
-  createTodo: Todo;
+  createPerspective: Perspective;
 };
 
 
-export type MutationCreateTodoArgs = {
-  input: NewTodo;
+export type MutationCreatePerspectiveArgs = {
+  input: NewPerspective;
 };
 
-export type NewTodo = {
+export type NewPerspective = {
   text: Scalars['String']['input'];
   userId: Scalars['String']['input'];
 };
 
-export type Query = {
-  __typename?: 'Query';
-  todos: Array<Todo>;
-};
-
-export type Todo = {
-  __typename?: 'Todo';
-  done: Scalars['Boolean']['output'];
+export type Perspective = {
+  __typename?: 'Perspective';
   id: Scalars['ID']['output'];
   text: Scalars['String']['output'];
-  user: User;
 };
 
-export type User = {
-  __typename?: 'User';
-  id: Scalars['ID']['output'];
-  name: Scalars['String']['output'];
+export type Query = {
+  __typename?: 'Query';
+  perspectives: Array<Perspective>;
 };

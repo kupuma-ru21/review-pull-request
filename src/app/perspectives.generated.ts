@@ -1,30 +1,31 @@
 import * as Types from "../types.generated";
 
 import { TypedDocumentNode as DocumentNode } from "@graphql-typed-document-node/core";
-export type TodosQueryVariables = Types.Exact<{ [key: string]: never }>;
+export type PerspectivesQueryVariables = Types.Exact<{ [key: string]: never }>;
 
-export type TodosQuery = {
+export type PerspectivesQuery = {
   __typename?: "Query";
-  todos: Array<{ __typename?: "Todo"; id: string }>;
+  perspectives: Array<{ __typename?: "Perspective"; id: string; text: string }>;
 };
 
-export const TodosDocument = {
+export const PerspectivesDocument = {
   kind: "Document",
   definitions: [
     {
       kind: "OperationDefinition",
       operation: "query",
-      name: { kind: "Name", value: "Todos" },
+      name: { kind: "Name", value: "Perspectives" },
       selectionSet: {
         kind: "SelectionSet",
         selections: [
           {
             kind: "Field",
-            name: { kind: "Name", value: "todos" },
+            name: { kind: "Name", value: "perspectives" },
             selectionSet: {
               kind: "SelectionSet",
               selections: [
                 { kind: "Field", name: { kind: "Name", value: "id" } },
+                { kind: "Field", name: { kind: "Name", value: "text" } },
               ],
             },
           },
@@ -32,4 +33,4 @@ export const TodosDocument = {
       },
     },
   ],
-} as unknown as DocumentNode<TodosQuery, TodosQueryVariables>;
+} as unknown as DocumentNode<PerspectivesQuery, PerspectivesQueryVariables>;

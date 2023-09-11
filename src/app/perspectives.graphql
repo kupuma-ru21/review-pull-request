@@ -1,0 +1,6 @@
+query Perspectives {
+  perspectives {
+    id
+    text
+  }
+}
