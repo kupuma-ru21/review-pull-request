@@ -1,8 +1,6 @@
 import './global.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-
-const inter = Inter({ subsets: ['latin'] });
+import { css } from '@/styled-system/css';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -13,7 +11,14 @@ export const metadata: Metadata = {
 // eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en">
-    <body className={inter.className}>{children}</body>
+    <body className={css({ paddingX: '24px' })}>
+      <header>
+        <h1 className={css({ fontSize: '2rem', fontWeight: 'bold' })}>
+          review-pull-request
+        </h1>
+      </header>
+      <article>{children}</article>
+    </body>
   </html>
 );
 
