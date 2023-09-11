@@ -1,5 +1,5 @@
 import getClient from '@/src/client';
-import { PerspectivesDocument } from '@/src/app/todos.generated';
+import { PerspectivesDocument } from '@/src/app/perspectives.generated';
 import Presenter from './presenter';
 
 // eslint-disable-next-line max-len
