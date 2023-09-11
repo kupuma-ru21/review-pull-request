@@ -1,5 +1,5 @@
 import getClient from '@/src/client';
-import { TodosDocument } from '@/src/app/todos.generated';
+import { PerspectivesDocument } from '@/src/app/todos.generated';
 import Presenter from './presenter';
 
 // eslint-disable-next-line max-len
@@ -7,7 +7,7 @@ import Presenter from './presenter';
 export const perspectives = [...Array(10)].map((_, index) => `perspective${index + 1}`);
 
 const Container = async () => {
-  const { data } = await getClient().query({ query: TodosDocument });
+  const { data } = await getClient().query({ query: PerspectivesDocument });
   console.log(data);
   return <Presenter perspectives={perspectives} />;
 };
