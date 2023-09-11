@@ -4,7 +4,7 @@ import Presenter from './presenter';
 
 // eslint-disable-next-line max-len
 // eslint-disable-next-line @typescript-eslint/no-magic-numbers, @typescript-eslint/no-unsafe-assignment
-const perspectives = [...Array(10)].map((_, index) => `perspective${index + 1}`);
+export const perspectives = [...Array(10)].map((_, index) => `perspective${index + 1}`);
 
 const Container = async () => {
   const { data } = await getClient().query({ query: TodosDocument });
