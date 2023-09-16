@@ -1,9 +1,5 @@
-# GraphQL schema example
-#
-# https://gqlgen.com/getting-started/
-
 type Perspective {
-  id: ID!
+  id: Int!
   text: String!
 }
 
@@ -13,7 +9,6 @@ type Query {
 
 input NewPerspective {
   text: String!
-  userId: String!
 }
 
 type Mutation {

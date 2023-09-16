@@ -2,7 +2,7 @@ import type { CodegenConfig } from '@graphql-codegen/cli';
 
 const config: CodegenConfig = {
   overwrite: true,
-  schema: 'https://review-pull-request-be.onrender.com/query',
+  schema: 'schema.graphqls',
   documents: 'src/app/**/*.graphql',
   generates: {
     'src/types.generated.ts': { plugins: ['typescript'] },
