@@ -1,10 +1,7 @@
 import getClient from '@/src/client';
 import { PerspectivesDocument } from '@/src/app/perspectives.generated';
-import Presenter from './presenter';
 
-const Container = async () => {
+export default async () => {
   const { data } = await getClient().query({ query: PerspectivesDocument });
-  return <Presenter perspectives={data.perspectives} />;
+  return { perspectives: data.perspectives };
 };
-
-export default Container;
