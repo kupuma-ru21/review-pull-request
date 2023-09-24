@@ -1,10 +1,9 @@
 import { css } from '@/styled-system/css';
 import hooks from './hooks';
+import type { Perspectives } from './types';
 
 const Presenter = (
-  { perspectives }: {
-    readonly perspectives: readonly { readonly id: number, readonly text: string }[]
-  },
+  { perspectives }: { readonly perspectives: Perspectives },
 ) => {
   const { hasPerspectives } = hooks({ perspectives });
   if (hasPerspectives) {
