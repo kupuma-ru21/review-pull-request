@@ -26,12 +26,11 @@ export type MutationCreatePerspectiveArgs = {
 
 export type NewPerspective = {
   text: Scalars['String']['input'];
-  userId: Scalars['String']['input'];
 };
 
 export type Perspective = {
   __typename?: 'Perspective';
-  id: Scalars['ID']['output'];
+  id: Scalars['Int']['output'];
   text: Scalars['String']['output'];
 };
 

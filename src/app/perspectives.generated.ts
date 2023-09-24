@@ -5,7 +5,7 @@ export type PerspectivesQueryVariables = Types.Exact<{ [key: string]: never }>;
 
 export type PerspectivesQuery = {
   __typename?: "Query";
-  perspectives: Array<{ __typename?: "Perspective"; id: string; text: string }>;
+  perspectives: Array<{ __typename?: "Perspective"; id: number; text: string }>;
 };
 
 export const PerspectivesDocument = {
