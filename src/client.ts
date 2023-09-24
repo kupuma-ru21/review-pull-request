@@ -3,7 +3,7 @@ import { registerApolloClient } from '@apollo/experimental-nextjs-app-support/rs
 
 const { getClient } = registerApolloClient(() => new ApolloClient({
   cache: new InMemoryCache(),
-  link: new HttpLink({ uri: 'https://review-pull-request-be.onrender.com/query' }),
+  link: new HttpLink({ uri: 'https://review-pull-request-back-end.onrender.com/query' }),
 }));
 
 export default getClient;
