@@ -1,6 +1,7 @@
 import { css } from '@/styled-system/css';
 import hooks from './hooks';
 import type { Perspectives } from './types';
+import CreatePerspective from './components/create-perspective';
 
 const Presenter = (
   { perspectives }: { readonly perspectives: Perspectives },
@@ -25,7 +26,7 @@ const Presenter = (
       </ul>
     );
   }
-  return <p>add perspectives</p>;
+  return <CreatePerspective />;
 };
 
 export default Presenter;
