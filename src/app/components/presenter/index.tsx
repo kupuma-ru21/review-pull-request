@@ -4,7 +4,7 @@ import type { Perspectives } from './types';
 import CreatePerspective from './components/create-perspective';
 
 const Presenter = (
-  { perspectives }: { readonly perspectives: Perspectives },
+  { perspectives }: { perspectives: Perspectives },
 ) => {
   const { hasPerspectives } = hooks({ perspectives });
   if (hasPerspectives) {

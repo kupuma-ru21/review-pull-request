@@ -1,1 +1,1 @@
-export type Perspectives = readonly { readonly id: number, readonly text: string }[]
+export type Perspectives = { id: number, text: string }[]
