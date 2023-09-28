@@ -33,6 +33,10 @@
     "react/jsx-sort-props": [2, { "multiline": "last" }],
     "react/no-multi-comp": "error",
     "react/no-object-type-as-default-prop": "error",
+    "react/jsx-props-no-spreading": [
+      "error",
+      { "exceptions": ["input"] }
+    ],
     "@typescript-eslint/array-type": "error",
     "@typescript-eslint/consistent-generic-constructors": "error",
     "@typescript-eslint/consistent-indexed-object-style": ["error", "record"],
