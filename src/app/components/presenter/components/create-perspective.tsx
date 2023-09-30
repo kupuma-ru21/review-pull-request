@@ -1,7 +1,7 @@
 'use client';
 
 import { css } from '@/styled-system/css';
-import { useCreatePerspective } from './hooks';
+import { useCreatePerspective } from './useCreatePerspective';
 import { DOM_ID } from './constants';
 
 export const CreatePerspective = () => {

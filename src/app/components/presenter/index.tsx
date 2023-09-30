@@ -1,12 +1,12 @@
 import { css } from '@/styled-system/css';
-import { hooks } from './hooks';
+import { usePresenter } from './usePresenter';
 import type { Perspectives } from './types';
 import { CreatePerspective } from './components/create-perspective';
 
 export const Presenter = (
   { perspectives }: { perspectives: Perspectives },
 ) => {
-  const { hasPerspectives } = hooks({ perspectives });
+  const { hasPerspectives } = usePresenter({ perspectives });
   if (hasPerspectives) {
     return (
       <ul>

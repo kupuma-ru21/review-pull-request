@@ -1,7 +1,7 @@
 import { Presenter } from '@/src/app/components/presenter';
-import { hooks } from './hooks';
+import { useContainer } from './useContainer';
 
 export const Container = async () => {
-  const { perspectives } = await hooks();
+  const { perspectives } = await useContainer();
   return <Presenter perspectives={perspectives} />;
 };
