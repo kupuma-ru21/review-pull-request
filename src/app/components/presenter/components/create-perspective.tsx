@@ -1,13 +1,13 @@
 'use client';
 
 import { css } from '@/styled-system/css';
-import hooks from './hooks';
+import { useCreatePerspective } from './hooks';
 import { DOM_ID } from './constants';
 
-const CreatePerspective = () => {
+export const CreatePerspective = () => {
   const {
     register, submit, isValid, errorInfo,
-  } = hooks();
+  } = useCreatePerspective();
 
   return (
     <form onSubmit={submit}>
@@ -37,5 +37,3 @@ const CreatePerspective = () => {
     </form>
   );
 };
-
-export default CreatePerspective;

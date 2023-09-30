@@ -4,7 +4,7 @@ import {
 import { useCallback } from 'react';
 import { valibotResolver } from '@hookform/resolvers/valibot';
 import type { SubmitHandler } from 'react-hook-form';
-import rhf from '@/lib/react-hook-form';
+import { useForm } from '@/lib/react-hook-form';
 import { DOM_ID } from './constants';
 
 const MIN_LENGTH_PERSPECTIVE = 1;
@@ -19,10 +19,10 @@ const Schema = object({
 
 type Input = InputBase<typeof Schema>;
 
-export default () => {
+export const useCreatePerspective = () => {
   const {
     register, handleSubmit, formState: { errors, isValid },
-  } = rhf.useForm<Input>(
+  } = useForm<Input>(
     {
       resolver: valibotResolver(Schema),
       defaultValues: { perspective: '' },

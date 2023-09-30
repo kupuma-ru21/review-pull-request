@@ -1,9 +1,9 @@
 import { css } from '@/styled-system/css';
-import hooks from './hooks';
+import { hooks } from './hooks';
 import type { Perspectives } from './types';
-import CreatePerspective from './components/create-perspective';
+import { CreatePerspective } from './components/create-perspective';
 
-const Presenter = (
+export const Presenter = (
   { perspectives }: { perspectives: Perspectives },
 ) => {
   const { hasPerspectives } = hooks({ perspectives });
@@ -28,5 +28,3 @@ const Presenter = (
   }
   return <CreatePerspective />;
 };
-
-export default Presenter;

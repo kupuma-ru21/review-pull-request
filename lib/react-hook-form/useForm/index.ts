@@ -11,7 +11,7 @@ const handleSubmitHelperFunction = <T>(
     });
   };
 
-const useForm = <
+export const useForm = <
     TFieldValues extends FieldValues = FieldValues
   >(parameter: UseFormProps<TFieldValues>) => {
   const { handleSubmit: handleSubmitBase, ...rest } = useFormBase(parameter);
@@ -22,5 +22,3 @@ const useForm = <
 
   return { ...rest, handleSubmit };
 };
-
-export default useForm;
