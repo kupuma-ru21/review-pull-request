@@ -1,24 +1,17 @@
 'use client';
 
 import {
-  type Input, minLength, object, string, maxLength,
+  type Input as InputBase, minLength, object, string, maxLength,
 } from 'valibot';
 import { css } from '@/styled-system/css';
-import { useForm } from 'react-hook-form';
-import { useCallback, type SyntheticEvent } from 'react';
+import { useCallback } from 'react';
 import { valibotResolver } from '@hookform/resolvers/valibot';
+import type { SubmitHandler } from 'react-hook-form';
+import rhf from '@/lib/react-hook-form';
 
 const DOM_ID = 'perspective';
 const MIN_LENGTH_PERSPECTIVE = 1;
 const MAX_LENGTH_PERSPECTIVE = 50;
-
-function handleSubmitHelperFunction<T>(onPromise: (event: SyntheticEvent) => Promise<T>) {
-  return (event: SyntheticEvent) => {
-    onPromise(event).catch(() => {
-      // TODO: handling
-    });
-  };
-}
 
 const Schema = object({
   [DOM_ID]: string('perspective must be a string.', [
@@ -27,21 +20,25 @@ const Schema = object({
   ]),
 });
 
+type Input = InputBase<typeof Schema>;
+
 const CreatePerspective = () => {
-  const { register, handleSubmit, formState: { errors, isValid } } = useForm<Input<typeof Schema>>(
+  const {
+    register, handleSubmit, formState: { errors, isValid },
+  } = rhf.useForm<Input>(
     {
       resolver: valibotResolver(Schema),
       defaultValues: { perspective: '' },
     },
   );
-  const submit = useCallback(() => {
-    // TODO: handling
+
+  const submit: SubmitHandler<Input> = useCallback(() => {
   }, []);
 
   const errorInfo = errors[DOM_ID];
 
   return (
-    <form onSubmit={handleSubmitHelperFunction(handleSubmit(submit))}>
+    <form onSubmit={handleSubmit(submit)}>
       <label className={css({ fontWeight: 'bold', cursor: 'pointer' })} htmlFor={DOM_ID}>
         create perspective
         <input
