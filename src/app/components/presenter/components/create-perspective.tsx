@@ -1,44 +1,17 @@
 'use client';
 
-import {
-  type Input as InputBase, minLength, object, string, maxLength,
-} from 'valibot';
 import { css } from '@/styled-system/css';
-import { useCallback } from 'react';
-import { valibotResolver } from '@hookform/resolvers/valibot';
-import type { SubmitHandler } from 'react-hook-form';
-import rhf from '@/lib/react-hook-form';
+import hooks from './hooks';
 
 const DOM_ID = 'perspective';
-const MIN_LENGTH_PERSPECTIVE = 1;
-const MAX_LENGTH_PERSPECTIVE = 50;
-
-const Schema = object({
-  [DOM_ID]: string('perspective must be a string.', [
-    minLength(MIN_LENGTH_PERSPECTIVE, 'Please enter perspective.'),
-    maxLength(MAX_LENGTH_PERSPECTIVE, 'Please make sure perspective is less than or 50 characters.'),
-  ]),
-});
-
-type Input = InputBase<typeof Schema>;
 
 const CreatePerspective = () => {
   const {
-    register, handleSubmit, formState: { errors, isValid },
-  } = rhf.useForm<Input>(
-    {
-      resolver: valibotResolver(Schema),
-      defaultValues: { perspective: '' },
-    },
-  );
-
-  const submit: SubmitHandler<Input> = useCallback(() => {
-  }, []);
-
-  const errorInfo = errors[DOM_ID];
+    register, submit, isValid, errorInfo,
+  } = hooks();
 
   return (
-    <form onSubmit={handleSubmit(submit)}>
+    <form onSubmit={submit}>
       <label className={css({ fontWeight: 'bold', cursor: 'pointer' })} htmlFor={DOM_ID}>
         create perspective
         <input
