@@ -2,8 +2,7 @@
 
 import { css } from '@/styled-system/css';
 import hooks from './hooks';
-
-const DOM_ID = 'perspective';
+import { DOM_ID } from './constants';
 
 const CreatePerspective = () => {
   const {
