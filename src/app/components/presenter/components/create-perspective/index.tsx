@@ -3,6 +3,7 @@
 import { css } from '@/styled-system/css';
 import { useCreatePerspective } from './useCreatePerspective';
 import { DOM_ID } from './constants';
+import { Error } from './components/Error';
 
 export const CreatePerspective = () => {
   const {
@@ -22,7 +23,7 @@ export const CreatePerspective = () => {
               borderColor: 'Highlight', borderWidth: 'medium', borderRadius: 'md', ml: '1.5', width: 'xl',
             })}
           />
-          {errorInfo ? <p className={css({ color: 'red.500', mb: '1.5' })}>{errorInfo.message}</p> : null}
+          {errorInfo ? <Error>{errorInfo.message}</Error> : null}
           {/* TODO: add preview ui for input */}
         </label>
         {/* TODO: fix button position degression when validation error occurs */}
@@ -37,7 +38,7 @@ export const CreatePerspective = () => {
         </button>
       </form>
       {/* TODO: create ui for error */}
-      {error ? <p className={css({ color: 'red.500', mb: '1.5' })}>{error.message}</p> : null}
+      {error ? <Error>{error.message}</Error> : null}
     </>
   );
 };
