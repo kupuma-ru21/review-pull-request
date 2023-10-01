@@ -22,7 +22,11 @@
       "error",
       { "devDependencies": ["**/*.test.tsx"] }
     ],
-    "no-restricted-imports": ["error", { "patterns": ["../*"] }],
+    "no-restricted-imports": ["error", {
+        "patterns": ["../*"],
+        "paths": [{ "name": "react-hook-form", "message": "Please use import-bar instead."}]
+      }
+    ],
     "react/function-component-definition": [
       2,
       { "namedComponents": "arrow-function" }
@@ -105,6 +109,10 @@
     {
       "files": ["src/**/page.tsx", "src/**/layout.tsx", "src/**/*.stories.ts"],
       "rules": {"import/no-default-export": "off"}
+    },
+    {
+      "files": ["lib/react-hook-form/**/*.ts"],
+      "rules": { "no-restricted-imports": "off" }
     }
   ]
 }
