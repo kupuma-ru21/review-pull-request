@@ -31,7 +31,7 @@ export const useCreatePerspective = () => {
   );
 
   const [
-    createPerspective, { loading: isCreatingPerspective },
+    createPerspective, { loading: isCreatingPerspective, error },
   ] = useMutation(CreatePerspectiveDocument);
 
   const submit: SubmitHandler<Input> = useCallback(async ({ perspective }) => {
@@ -41,6 +41,6 @@ export const useCreatePerspective = () => {
   const errorInfo = errors[DOM_ID];
 
   return {
-    register, submit: handleSubmit(submit), isValid, errorInfo, isCreatingPerspective,
+    register, submit: handleSubmit(submit), isValid, errorInfo, isCreatingPerspective, error,
   };
 };
