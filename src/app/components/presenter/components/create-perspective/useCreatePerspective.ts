@@ -4,7 +4,9 @@ import {
 import { useCallback } from 'react';
 import { valibotResolver } from '@hookform/resolvers/valibot';
 import { useForm, type SubmitHandler } from '@/lib/react-hook-form';
+import { useMutation } from '@apollo/client';
 import { DOM_ID } from './constants';
+import { CreatePerspectiveDocument } from './graphql/create-perspective.generated';
 
 const MIN_LENGTH_PERSPECTIVE = 1;
 const MAX_LENGTH_PERSPECTIVE = 50;
@@ -28,8 +30,11 @@ export const useCreatePerspective = () => {
     },
   );
 
-  const submit: SubmitHandler<Input> = useCallback(() => {
-  }, []);
+  const [createPerspective] = useMutation(CreatePerspectiveDocument);
+
+  const submit: SubmitHandler<Input> = useCallback(async ({ perspective }) => {
+    await createPerspective({ variables: { text: perspective } });
+  }, [createPerspective]);
 
   const errorInfo = errors[DOM_ID];
 

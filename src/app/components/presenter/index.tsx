@@ -2,6 +2,7 @@ import { css } from '@/styled-system/css';
 import { usePresenter } from './usePresenter';
 import type { Perspectives } from './types';
 import { CreatePerspective } from './components/create-perspective';
+import { ApolloWrapper } from './components/apollo-wrapper';
 
 export const Presenter = (
   { perspectives }: { perspectives: Perspectives },
@@ -26,5 +27,11 @@ export const Presenter = (
       </ul>
     );
   }
-  return <CreatePerspective />;
+
+  // I'm using Apollo Wrapper here too so we can use useMutation in the CreatePerspective component
+  return (
+    <ApolloWrapper>
+      <CreatePerspective />
+    </ApolloWrapper>
+  );
 };

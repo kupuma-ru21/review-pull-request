@@ -1,0 +1,6 @@
+mutation CreatePerspective($text: String!) {
+  createPerspective(input: { text: $text }) {
+    id
+    text
+  }
+}
