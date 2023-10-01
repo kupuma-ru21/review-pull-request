@@ -3,8 +3,7 @@ import {
 } from 'valibot';
 import { useCallback } from 'react';
 import { valibotResolver } from '@hookform/resolvers/valibot';
-import type { SubmitHandler } from 'react-hook-form';
-import { useForm } from '@/lib/react-hook-form';
+import { useForm, type SubmitHandler } from '@/lib/react-hook-form';
 import { DOM_ID } from './constants';
 
 const MIN_LENGTH_PERSPECTIVE = 1;
