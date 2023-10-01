@@ -6,7 +6,7 @@ import { DOM_ID } from './constants';
 
 export const CreatePerspective = () => {
   const {
-    register, submit, isValid, errorInfo,
+    register, submit, isValid, errorInfo, isCreatingPerspective,
   } = useCreatePerspective();
 
   return (
@@ -26,7 +26,7 @@ export const CreatePerspective = () => {
       </label>
       {/* TODO: fix button position degression when validation error occurs */}
       <button
-        disabled={!isValid}
+        disabled={!isValid || isCreatingPerspective}
         type="submit"
         className={css({
           ml: '1.5', bgColor: 'blue.300', padding: 1, borderRadius: '8px', cursor: 'pointer',
